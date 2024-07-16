@@ -1,4 +1,20 @@
 date,amount,category,description
-20-07-2024,125,Income,Salary
-15-07-2024,10.0,Expense,mcdonalds
-16-07-2024,234.0,Income,side hustle
+21-07-2024,50.0,Expense,gas
+22-07-2024,150.0,Income,freelance
+23-07-2024,20.0,Expense,coffee
+24-07-2024,200.0,Income,bonus
+25-07-2024,35.0,Expense,cinema
+26-07-2024,100.0,Expense,electric bill
+29-07-2024,120.0,Expense,clothing
+30-07-2024,500.0,Income,project completion
+31-07-2024,15.0,Expense,books
+01-08-2024,600.0,Income,consulting
+02-08-2024,25.0,Expense,pharmacy
+03-08-2024,450.0,Income,freelance work
+04-08-2024,60.0,Expense,gym membership
+05-08-2024,70.0,Expense,utilities
+06-08-2024,90.0,Income,rent payment
+07-08-2024,50.0,Expense,groceries
+08-08-2024,250.0,Income,dividends
+09-08-2024,30.0,Expense,coffee shop
+10-08-2024,130.0,Expense,car maintenance
