@@ -1,3 +1,4 @@
-data,amount,category,description
+date,amount,category,description
 20-07-2024,125,Income,Salary
 15-07-2024,10.0,Expense,mcdonalds
+16-07-2024,234.0,Income,side hustle

@@ -3,8 +3,6 @@ import csv
 from datetime import datetime
 from data_entry import get_amount, get_category, get_date, get_description
 
-
-
 class CSV:
     CSV_FILE = "finance_data.csv"
     COLUMNS = ["date", "amount", "category", "description"]
@@ -44,8 +42,9 @@ class CSV:
         mask = (df["date"] >= start_date) & (df["date"] <= end_date)
         filtered_df = df.loc[mask] #returns a filtered date frame where the mask was true 
         if filtered_df.empty:
-            print("No transactions found, in the given date range")
+            print("No transactions found, in the given date range.")
         else: 
+            #transaction summary
             print(f"Transactions from {start_date.strftime(CSV.FORMAT)} to {end_date.strftime(CSV.FORMAT)}")
             print(filtered_df.to_string(index=False, formatters={"date": lambda x: x.strftime(CSV.FORMAT)}))
             total_income=filtered_df[filtered_df["category"]=="Income"]["amount"].sum()
@@ -64,4 +63,23 @@ def add():
     description = get_description()
     CSV.add_entry(date, amount, category, description)
 
-add()
+def main():
+    while True:
+        print("\n1. Add a new transaction")
+        print("\n2. View transactions and summary within a date range")
+        print("\n3. Exit")
+        choice = input("Enter your choice (1-3): ")
+        if choice == "1":
+            add()
+        elif choice == "2":
+            start_date = get_date("Enter the start date (dd-mm-yyyy): ")
+            end_date = get_date("Enter the end date (dd-mm-yyyy): ")
+            df = CSV.get_transactions(start_date, end_date)
+        elif choice == "3":
+            print("Exiting...")
+            break
+        else: 
+            print("Invalid choice. Enter 1, 2, or 3.")
+
+if __name__ == "__main__":
+    main()
